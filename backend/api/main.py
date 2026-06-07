@@ -85,7 +85,7 @@ async def predict_stuck_pipe(data: DrillingDataInput):
     parameters = data.model_dump(exclude={"well_id", "formation_type", "drilling_phase"})
     result = prediction_service.predict(parameters, model_name=settings.default_model)
 
-    alerts = alert_engine.evaluate(data.well_id, parameters, result["stuck_pipe_probability"])
+    alert_engine.evaluate(data.well_id, parameters, result["stuck_pipe_probability"])
 
     return PredictionResponse(
         well_id=data.well_id,

@@ -1,3 +1,4 @@
+import numpy as np
 from typing import Dict, List, Any
 from backend.api.schemas import RiskLevel
 
@@ -122,6 +123,3 @@ class DrillingRecommendationEngine:
         reductions = [r["expected_risk_reduction"] for r in recommendations[:3]]
         combined = 1 - np.prod([1 - r for r in reductions])
         return min(0.5, combined)
-
-
-import numpy as np

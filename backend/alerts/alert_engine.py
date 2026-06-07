@@ -1,10 +1,9 @@
-import numpy as np
 from datetime import datetime
-from typing import List, Dict, Any, Optional
-from dataclasses import dataclass, field
+from typing import List, Dict, Optional
+from dataclasses import dataclass
 import uuid
 
-from backend.api.schemas import AlertSeverity, RiskLevel
+from backend.api.schemas import AlertSeverity
 
 
 @dataclass

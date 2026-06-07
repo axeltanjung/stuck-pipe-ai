@@ -4,7 +4,7 @@ from sklearn.metrics import (
     classification_report, confusion_matrix, precision_recall_curve
 )
 from xgboost import XGBClassifier
-from typing import Dict, Any, Tuple
+from typing import Dict, Any
 import joblib
 import os
 

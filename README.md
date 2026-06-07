@@ -21,6 +21,15 @@ An enterprise-grade machine learning platform that predicts stuck pipe incidents
 - [Future Improvements](#future-improvements)
 
 ---
+## Project Preview
+
+<img src="assets/AI Insights.png" width="1200"/>
+
+<img src="assets/Dashboard.png" width="1200"/>
+
+<img src="assets/Alert Center.png" width="1200"/>
+
+<img src="assets/Optimization.png" width="1200"/>
 
 ## Project Background
 

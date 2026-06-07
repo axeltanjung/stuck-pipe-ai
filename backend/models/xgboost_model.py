@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.metrics import (
     roc_auc_score, f1_score, precision_score, recall_score,
-    classification_report, confusion_matrix, precision_recall_curve
+    precision_recall_curve
 )
 from xgboost import XGBClassifier
 from typing import Dict, Any

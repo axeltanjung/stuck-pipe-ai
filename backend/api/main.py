@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 from typing import List, Dict, Any
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import uuid
@@ -59,10 +59,14 @@ def _generate_simulated_wells() -> List[Dict[str, Any]]:
 
 
 def _risk_level_from_prob(prob: float) -> RiskLevel:
-    if prob >= 0.8: return RiskLevel.CRITICAL
-    elif prob >= 0.6: return RiskLevel.HIGH_RISK
-    elif prob >= 0.4: return RiskLevel.WARNING
-    elif prob >= 0.2: return RiskLevel.LOW_RISK
+    if prob >= 0.8:
+        return RiskLevel.CRITICAL
+    elif prob >= 0.6:
+        return RiskLevel.HIGH_RISK
+    elif prob >= 0.4:
+        return RiskLevel.WARNING
+    elif prob >= 0.2:
+        return RiskLevel.LOW_RISK
     return RiskLevel.NORMAL
 
 
